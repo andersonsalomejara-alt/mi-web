@@ -90,3 +90,28 @@ body {
     text-align: center;
     /* ... resto del código ... */
 }
+.skills-container {
+    display: flex; /* Esto pone las etiquetas una al lado de otra */
+    justify-content: center; /* Las centra */
+    flex-wrap: wrap; /* Si no caben, bajan a la siguiente línea */
+    gap: 10px; /* Espacio entre etiquetas */
+    max-width: 600px;
+    margin: 20px auto; /* Centrado en la página */
+}
+
+.skill {
+    background-color: #e0e0e0; /* Gris clarito por defecto */
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px; /* Forma de píldora */
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #ccc;
+}
+
+/* PEQUEÑO TRUCO: Cuando activas el modo oscuro, cambiamos el color de las etiquetas */
+.modo-oscuro .skill {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
