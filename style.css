@@ -29,8 +29,8 @@ button {
     border-radius: 5px;
 }
 .foto-perfil {
-    width: 150px;       /* Ancho fijo */
-    height: 150px;      /* Alto fijo igual para que sea cuadrada */
+    width: 250px;       /* Ancho fijo */
+    height: 250px;      /* Alto fijo igual para que sea cuadrada */
     object-fit: cover;  /* Para que la imagen no se deforme/estire */
     border-radius: 50%; /* Esto la convierte en un círculo perfecto */
     margin-top: 20px;
