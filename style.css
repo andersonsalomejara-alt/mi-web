@@ -80,3 +80,13 @@ button {
 .tarjeta:hover {
     transform: translateY(-5px);
 }
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    
+    /* CAMBIO: Usamos Poppins y, si falla, sans-serif */
+    font-family: 'Poppins', sans-serif; 
+    
+    text-align: center;
+    /* ... resto del código ... */
+}
