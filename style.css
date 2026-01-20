@@ -36,3 +36,23 @@ button {
     margin-top: 20px;
     border: 3px solid var(--color-boton); /* Un borde del color de tu tema */
 }
+.redes-sociales {
+    margin: 20px 0; /* Separación arriba y abajo */
+}
+
+.redes-sociales a {
+    text-decoration: none; /* Quita el subrayado feo */
+    color: var(--color-texto);
+    border: 2px solid var(--color-boton);
+    padding: 8px 16px;
+    border-radius: 20px; /* Bordes redondeados */
+    margin: 0 5px; /* Espacio entre los botones */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.redes-sociales a:hover {
+    background-color: var(--color-boton);
+    color: white;
+}
