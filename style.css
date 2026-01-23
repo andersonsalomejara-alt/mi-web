@@ -202,8 +202,7 @@ body {
 .hero {
     text-align: center;
     padding: 100px 20px; /* Mucho espacio arriba y abajo */
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .hero h1 {
@@ -331,4 +330,9 @@ footer {
     color: #666; /* Texto oscuro */
     background-color: #fff;
     border-top: 1px solid #eee;
+}
+.hero h1, .hero p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
