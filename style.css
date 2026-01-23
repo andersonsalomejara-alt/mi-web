@@ -225,3 +225,71 @@ body {
     transform: translateY(-2px);
     background-color: #d43f43;
 }
+.seccion-proyectos {
+    padding: 80px 20px;
+    background-color: #111; /* Mismo fondo oscuro */
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: #fff;
+    font-weight: 300; /* Letra más fina y elegante */
+}
+
+/* LA MAGIA: Cuadrícula automática */
+.grid-proyectos {
+    display: grid;
+    /* Esto crea columnas automáticas de mínimo 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; /* Espacio entre tarjetas */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Diseño de la tarjeta minimalista */
+.tarjeta-minimal {
+    background-color: #1A1A1A; /* Un gris apenas más claro que el fondo */
+    padding: 40px;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+    border: 1px solid #333; /* Borde muy sutil */
+    text-align: left; /* Alineado a la izquierda como OnePageLove */
+}
+
+.tarjeta-minimal:hover {
+    transform: translateY(-5px);
+    background-color: #222;
+    border-color: #444;
+}
+
+.icono-proyecto {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-minimal h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.tarjeta-minimal p {
+    color: #888;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.link-proyecto {
+    color: #E84C50; /* El mismo rojo de tu botón principal */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.link-proyecto:hover {
+    text-decoration: underline;
+}
