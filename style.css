@@ -1,223 +1,87 @@
 :root {
     --color-fondo: #ffffff;
-    --color-texto: #000000;
-    --color-boton: #007bff;
+    --color-texto: #333333;
+    --color-hero-bg: #111111;
+    --color-hero-text: #ffffff;
 }
 
-.modo-oscuro {
-    --color-fondo: #121212;
-    --color-texto: #e0e0e0;
-    --color-boton: #bb86fc;
-}
-
-body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 50px;
-    transition: background-color 0.5s ease;
-}
-
-button {
-    background-color: var(--color-boton);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.foto-perfil {
-    width: 250px;       /* Ancho fijo */
-    height: 250px;      /* Alto fijo igual para que sea cuadrada */
-    object-fit: cover;  /* Para que la imagen no se deforme/estire */
-    border-radius: 50%; /* Esto la convierte en un círculo perfecto */
-    margin-top: 20px;
-    border: 3px solid var(--color-boton); /* Un borde del color de tu tema */
-}
-.redes-sociales {
-    margin: 20px 0; /* Separación arriba y abajo */
-}
-
-.redes-sociales a {
-    text-decoration: none; /* Quita el subrayado feo */
-    color: var(--color-texto);
-    border: 2px solid var(--color-boton);
-    padding: 8px 16px;
-    border-radius: 20px; /* Bordes redondeados */
-    margin: 0 5px; /* Espacio entre los botones */
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-/* Efecto al pasar el mouse por encima */
-.redes-sociales a:hover {
-    background-color: var(--color-boton);
-    color: white;
-}
-.seccion-proyectos {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.tarjeta {
-    /* Un borde sutil del color de tu tema */
-    border: 2px solid var(--color-boton);
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px;
-    margin: 20px auto; /* 'auto' centra la tarjeta horizontalmente */
-    max-width: 400px; /* Que no sea demasiado ancha */
-    
-    /* Sombra suave para darle efecto 3D */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    
-    /* Transición para animaciones futuras */
-    transition: transform 0.2s;
-}
-
-/* Efecto divertido: La tarjeta "salta" un poco cuando pasas el mouse */
-.tarjeta:hover {
-    transform: translateY(-5px);
-}
-body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    
-    /* CAMBIO: Usamos Poppins y, si falla, sans-serif */
-    font-family: 'Poppins', sans-serif; 
-    
-    text-align: center;
-    /* ... resto del código ... */
-}
-.skills-container {
-    display: flex; /* Esto pone las etiquetas una al lado de otra */
-    justify-content: center; /* Las centra */
-    flex-wrap: wrap; /* Si no caben, bajan a la siguiente línea */
-    gap: 10px; /* Espacio entre etiquetas */
-    max-width: 600px;
-    margin: 20px auto; /* Centrado en la página */
-}
-
-.skill {
-    background-color: #e0e0e0; /* Gris clarito por defecto */
-    color: #333;
-    padding: 8px 15px;
-    border-radius: 20px; /* Forma de píldora */
-    font-size: 14px;
-    font-weight: 600;
-    border: 1px solid #ccc;
-}
-
-/* PEQUEÑO TRUCO: Cuando activas el modo oscuro, cambiamos el color de las etiquetas */
-.modo-oscuro .skill {
-    background-color: #333;
-    color: white;
-    border-color: #555;
-}
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    font-size: 14px;
-    color: #666;
-    border-top: 1px solid #ddd; /* Una línea finita separadora */
-}
-
-/* Ajuste para modo oscuro */
-.modo-oscuro footer {
-    color: #888;
-    border-top-color: #333;
-}
-.btn-whatsapp {
-    background-color: #25D366 !important; 
-    color: white !important;
-    border-color: #25D366 !important;
-    font-weight: bold;
-}
-
-.btn-whatsapp:hover {
-    background-color: #128C7E !important;
-    border-color: #128C7E !important;
-    transform: scale(1.05); 
-}
-.btn-facebook {
-    background-color: #1877F2 !important; /* Azul oficial de Facebook */
-    color: white !important;
-    border-color: #1877F2 !important;
-}
-
-.btn-facebook:hover {
-    background-color: #166fe5 !important;
-    border-color: #166fe5 !important;
-    transform: scale(1.05); /* Efecto de crecimiento */
-}
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff; /* ANTES ERA #111, AHORA BLANCO */
-    color: #333333;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
-.navbar, .hero {
-    background-color: #111;
-    color: #fff;
-}
-.hero p {
-    color: #bbb; 
-}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #111;
+    background-color: var(--color-hero-bg);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #222; /* Línea sutil separadora */
+    border-bottom: 1px solid #222;
 }
+
 .logo {
     font-weight: 700;
     font-size: 20px;
     color: #fff;
     letter-spacing: -0.5px;
 }
+
 .navbar nav a {
     text-decoration: none;
-    color: #999; /* Gris suave para textos secundarios */
+    color: #999;
     margin-left: 20px;
     font-size: 14px;
     transition: color 0.3s;
 }
+
 .navbar nav a:hover {
     color: #fff;
 }
-/* Botón especial del menú */
+
 .nav-btn {
     border: 1px solid #333;
     padding: 8px 16px;
     border-radius: 4px;
 }
-/* 2. HERO (PORTADA) */
+
 .hero {
+    background-color: var(--color-hero-bg);
+    color: var(--color-hero-text);
     text-align: center;
-    padding: 100px 20px; /* Mucho espacio arriba y abajo */
+    padding: 100px 20px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .hero h1 {
-    font-size: 48px; /* Texto gigante */
+    font-size: 48px;
     line-height: 1.1;
     margin-bottom: 20px;
     letter-spacing: -1px;
 }
+
 .hero p {
-    color: #888;
+    color: #bbb;
     font-size: 18px;
     margin-bottom: 40px;
 }
+
+.hero h1, .hero p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .btn-hero {
-    background-color: #E84C50; /* El color "Rojo OnePageLove" */
+    background-color: #E84C50;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -227,42 +91,41 @@ body {
     display: inline-block;
     transition: transform 0.2s;
 }
+
 .btn-hero:hover {
     transform: translateY(-2px);
     background-color: #d43f43;
 }
+
 .seccion-proyectos {
     padding: 80px 20px;
-    background-color: #ffffff; /* Mismo fondo oscuro */
+    background-color: var(--color-fondo);
 }
 
 .titulo-seccion {
     text-align: center;
     font-size: 32px;
     margin-bottom: 60px;
-    color: #222; /* Título oscuro */
-    font-weight: 300; /* Letra más fina y elegante */
+    color: #222;
+    font-weight: 300;
 }
 
-/* LA MAGIA: Cuadrícula automática */
 .grid-proyectos {
     display: grid;
-    /* Esto crea columnas automáticas de mínimo 300px */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px; /* Espacio entre tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* Diseño de la tarjeta minimalista */
 .tarjeta-minimal {
-    background-color: #fff; /* Fondo blanco */
+    background-color: #fff;
     padding: 40px;
     border-radius: 8px;
-    /* Sombra suave para que destaque sobre el fondo blanco */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-    border: 1px solid #f0f0f0; /* Borde muy clarito */
-    transition: transform 0.3s; /* Alineado a la izquierda como OnePageLove */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s;
+    text-align: left;
 }
 
 .tarjeta-minimal:hover {
@@ -276,16 +139,17 @@ body {
 }
 
 .tarjeta-minimal h3 {
-    color: #111; /* Título del proyecto negro */
+    color: #111;
     margin-top: 0;
 }
 
 .tarjeta-minimal p {
     color: #666;
+    line-height: 1.6;
 }
 
 .link-proyecto {
-    color: #E84C50; /* El mismo rojo de tu botón principal */
+    color: #E84C50;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -296,11 +160,11 @@ body {
 .link-proyecto:hover {
     text-decoration: underline;
 }
+
 .seccion-habilidades {
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Un gris muuuy suave para diferenciarlo un poco */
+    background-color: #f9f9f9;
     border-top: 1px solid #eee;
-    text-align: center; /* Línea separadora sutil */
 }
 
 .skills-container {
@@ -315,24 +179,81 @@ body {
 .skill {
     background-color: #fff;
     color: #555;
-    border: 1px solid #ddd; /* Borde gris suave */
+    border: 1px solid #ddd;
     padding: 10px 20px;
     border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-/* Efecto al pasar el mouse: se ilumina */
 .skill:hover {
-    border-color: #E84C50; /* El rojo de tu marca */
-    color: #fff;
+    border-color: #E84C50;
+    color: #E84C50;
     transform: translateY(-2px);
 }
+
+.redes-sociales {
+    margin: 40px 0;
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.btn-facebook {
+    background-color: #1877F2;
+    color: white;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.05);
+}
+
 footer {
-    color: #666; /* Texto oscuro */
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
     background-color: #fff;
     border-top: 1px solid #eee;
+    margin-top: auto;
 }
-.hero h1, .hero p {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+
+#boton-tema {
+    margin: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Modo Oscuro (Opcional si quieres invertir todo, si no, puedes quitarlo) */
+.modo-oscuro {
+    --color-fondo: #121212;
+    --color-texto: #e0e0e0;
+}
+.modo-oscuro .seccion-proyectos, .modo-oscuro .seccion-habilidades, .modo-oscuro footer {
+    background-color: #121212;
+    border-color: #333;
+}
+.modo-oscuro .tarjeta-minimal, .modo-oscuro .skill {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+.modo-oscuro .tarjeta-minimal h3, .modo-oscuro .titulo-seccion {
+    color: #fff;
 }
