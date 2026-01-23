@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff; /* Blanco Fijo */
-    color: #333333; /* Texto Oscuro Fijo */
+    background-color: #111111; /* FONDO GENERAL NEGRO */
+    color: #e0e0e0; /* TEXTO CLARO */
     text-align: center;
 }
 
-/* --- CABECERA Y PORTADA (Fondo Negro) --- */
+/* --- CABECERA Y PORTADA (Ya eran oscuras, se mantienen) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -43,15 +43,69 @@ body {
     border: 1px solid #333;
     padding: 8px 16px;
     border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent; /* Para asegurar que el botón sea transparente */
+    color: #999;
+}
+.nav-btn:hover {
+    color: #fff;
+    border-color: #fff;
 }
 
+
+/* --- ESTILOS DEL MENÚ DESPLEGABLE (CLICK) --- */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    right: 0;
+    background-color: #1a1a1a; /* Fondo oscuro para el menú */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); /* Sombra más oscura */
+    z-index: 101;
+    border-radius: 4px;
+    border: 1px solid #333;
+    margin-top: 10px;
+}
+
+/* Clase que añade JS para mostrar el menú */
+.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ddd !important; /* Texto claro */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    margin-left: 0 !important;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+    color: #fff !important;
+}
+
+.nav-btn i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* --- HERO SECTION --- */
 .hero {
     background-color: #111;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
     width: 100%;
-    box-sizing: border-box; /* Evita que el padding rompa el ancho */
+    box-sizing: border-box;
 }
 
 .hero h1 {
@@ -67,7 +121,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Centrado del texto dentro del Hero ancho */
 .hero h1, .hero p {
     max-width: 800px;
     margin-left: auto;
@@ -91,17 +144,17 @@ body {
     background-color: #d43f43;
 }
 
-/* --- SECCIÓN PROYECTOS (Fondo Blanco) --- */
+/* --- SECCIÓN PROYECTOS (AHORA OSCURA) --- */
 .seccion-proyectos {
     padding: 80px 20px;
-    background-color: #ffffff;
+    background-color: #111; /* Fondo negro */
 }
 
 .titulo-seccion {
     text-align: center;
     font-size: 32px;
     margin-bottom: 60px;
-    color: #222;
+    color: #fff; /* Título blanco */
     font-weight: 300;
 }
 
@@ -113,19 +166,20 @@ body {
     margin: 0 auto;
 }
 
+/* TARJETAS DARK MODE */
 .tarjeta-minimal {
-    background-color: #fff;
+    background-color: #1a1a1a; /* Un gris muy oscuro, casi negro */
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid #f0f0f0;
-    transition: transform 0.3s;
+    border: 1px solid #333; /* Borde sutil oscuro */
+    transition: transform 0.3s, background-color 0.3s;
     text-align: left;
 }
 
 .tarjeta-minimal:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    background-color: #222; /* Se aclara un poquito al pasar el mouse */
+    border-color: #444;
 }
 
 .icono-proyecto {
@@ -134,12 +188,12 @@ body {
 }
 
 .tarjeta-minimal h3 {
-    color: #111;
+    color: #fff; /* Título blanco */
     margin-top: 0;
 }
 
 .tarjeta-minimal p {
-    color: #666;
+    color: #aaa; /* Texto descriptivo gris claro */
     line-height: 1.6;
 }
 
@@ -156,11 +210,11 @@ body {
     text-decoration: underline;
 }
 
-/* --- HABILIDADES --- */
+/* --- HABILIDADES (AHORA OSCURAS) --- */
 .seccion-habilidades {
     padding: 60px 20px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #eee;
+    background-color: #111; /* Fondo negro */
+    border-top: 1px solid #222;
 }
 
 .skills-container {
@@ -173,9 +227,9 @@ body {
 }
 
 .skill {
-    background-color: #fff;
-    color: #555;
-    border: 1px solid #ddd;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #ccc; /* Texto claro */
+    border: 1px solid #333;
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 14px;
@@ -189,84 +243,12 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- REDES SOCIALES Y FOOTER --- */
-.redes-sociales {
-    margin: 40px 0;
-}
-
-.redes-sociales a {
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    margin: 0 10px;
-    font-weight: bold;
-    display: inline-block;
-    transition: transform 0.2s;
-}
-
-.btn-facebook {
-    background-color: #1877F2;
-    color: white;
-}
-
-.btn-whatsapp {
-    background-color: #25D366;
-    color: white;
-}
-
-.redes-sociales a:hover {
-    transform: scale(1.05);
-}
-
+/* --- FOOTER OSCURO --- */
 footer {
     padding: 20px;
     font-size: 14px;
-    color: #666;
-    background-color: #fff;
-    border-top: 1px solid #eee;
+    color: #888; /* Texto gris medio */
+    background-color: #111; /* Fondo negro */
+    border-top: 1px solid #222;
     margin-top: auto;
-}
-.dropdown {
-    display: inline-block;
-    position: relative;
-}
-
-/* El menú oculto (por defecto) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0; /* Se alinea a la derecha para no salirse de la pantalla */
-    background-color: #222; /* Fondo oscuro elegante */
-    min-width: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 101;
-    border-radius: 4px;
-    border: 1px solid #333;
-    margin-top: 10px; /* Un pequeño espacio para separarlo del botón */
-}
-
-/* Los enlaces dentro del menú */
-.dropdown-content a {
-    color: #fff !important; /* Texto blanco */
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
-    margin-left: 0 !important; /* Reseteamos márgenes viejos */
-    text-align: left;
-    transition: background-color 0.2s;
-}
-
-/* Efecto al pasar el mouse por las opciones */
-.dropdown-content a:hover {
-    background-color: #333;
-    color: #fff;
-}
-/* Ajuste para la flechita del botón */
-.nav-btn i {
-    font-size: 12px;
-    margin-left: 5px;
-}
-.show {
-    display: block;
 }
