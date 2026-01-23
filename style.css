@@ -262,14 +262,11 @@ footer {
     background-color: #333;
     color: #fff;
 }
-
-/* LA MAGIA: Mostrar el menú al pasar el mouse sobre el contenedor */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /* Ajuste para la flechita del botón */
 .nav-btn i {
     font-size: 12px;
     margin-left: 5px;
+}
+.show {
+    display: block;
 }
