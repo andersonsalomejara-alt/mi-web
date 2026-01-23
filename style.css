@@ -226,3 +226,50 @@ footer {
     border-top: 1px solid #eee;
     margin-top: auto;
 }
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+/* El menú oculto (por defecto) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Se alinea a la derecha para no salirse de la pantalla */
+    background-color: #222; /* Fondo oscuro elegante */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 101;
+    border-radius: 4px;
+    border: 1px solid #333;
+    margin-top: 10px; /* Un pequeño espacio para separarlo del botón */
+}
+
+/* Los enlaces dentro del menú */
+.dropdown-content a {
+    color: #fff !important; /* Texto blanco */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    margin-left: 0 !important; /* Reseteamos márgenes viejos */
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+/* Efecto al pasar el mouse por las opciones */
+.dropdown-content a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* LA MAGIA: Mostrar el menú al pasar el mouse sobre el contenedor */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Ajuste para la flechita del botón */
+.nav-btn i {
+    font-size: 12px;
+    margin-left: 5px;
+}
