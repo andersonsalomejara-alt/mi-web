@@ -2,18 +2,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: #ffffff; /* Fondo general blanco */
+    color: #333333; /* Texto gris oscuro */
     text-align: center;
 }
 
-/* --- NAVBAR --- */
+/* --- BARRA DE NAVEGACIÓN (NAVBAR) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #111;
+    background-color: #111; /* Barra negra */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -33,15 +33,15 @@ body {
     margin-left: 20px;
     font-size: 14px;
     transition: color 0.3s;
-    /* Permite alinear el icono y el texto verticalmente */
-    display: inline-flex;
+    display: inline-flex; /* Para alinear iconos si los hubiera */
     align-items: center;
 }
 
 .navbar nav a:hover, .navbar nav a.link-activo {
-    color: #fff;
+    color: #fff; /* Blanco al pasar el mouse */
 }
 
+/* Botón de Contacto (Desplegable) */
 .nav-btn {
     border: none;
     background-color: transparent;
@@ -62,17 +62,17 @@ body {
     margin-left: 5px;
 }
 
-/* --- DROPDOWN --- */
+/* --- MENÚ DESPLEGABLE (DROPDOWN) --- */
 .dropdown {
     display: inline-block;
     position: relative;
 }
 
 .dropdown-content {
-    display: none;
+    display: none; /* Oculto por defecto */
     position: absolute;
     right: 0;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Fondo oscuro */
     min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 101;
@@ -82,7 +82,7 @@ body {
 }
 
 .show {
-    display: block;
+    display: block; /* Se activa con JS */
 }
 
 .dropdown-content a {
@@ -94,7 +94,6 @@ body {
     margin-left: 0 !important;
     text-align: left;
     transition: background-color 0.2s;
-    display: block; /* Restaurado a block para el dropdown */
 }
 
 .dropdown-content a:hover {
@@ -106,7 +105,7 @@ body {
     margin-right: 12px;
 }
 
-/* --- ELEMENTOS GENERALES (HERO, PROYECTOS, ETC) --- */
+/* --- SECCIÓN HERO (PORTADA) --- */
 .hero {
     background-color: #111;
     color: #fff;
@@ -136,7 +135,7 @@ body {
 }
 
 .btn-hero {
-    background-color: #E84C50;
+    background-color: #E84C50; /* Rojo marca */
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -152,6 +151,7 @@ body {
     background-color: #d43f43;
 }
 
+/* --- SECCIÓN PROYECTOS --- */
 .seccion-proyectos {
     padding: 80px 20px;
     background-color: #ffffff;
@@ -217,6 +217,7 @@ body {
     text-decoration: underline;
 }
 
+/* --- SECCIÓN HABILIDADES --- */
 .seccion-habilidades {
     padding: 60px 20px;
     background-color: #f9f9f9;
@@ -249,7 +250,10 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- ESTILOS DE LA PÁGINA "LOCALES" --- */
+/* =========================================
+   ESTILOS DE LA PÁGINA "LOCALES" (NUEVO)
+   ========================================= */
+
 .contenedor-principal {
     max-width: 1200px;
     margin: 60px auto;
@@ -273,191 +277,19 @@ body {
     margin: 0 auto 50px auto;
 }
 
-/* El mapa grande y centrado (YA SIN FILTRO GRIS) */
-.contenedor-mapa-centrado {
-    width: 100%;
-    height: 650px;
-    min-height: 650px;
-    background-color: #eee;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border: 1px solid #ddd;
-    margin-bottom: 40px;
-}
-
-/* SE ELIMINÓ EL BLOQUE QUE DABA EFECTO GRIS AL IFRAME */
-footer {
-    padding: 20px;
-    font-size: 14px;
-    color: #666;
-    background-color: #fff;
-    border-top: 1px solid #eee;
-    margin-top: auto;
-}
-.contenedor-principal {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.titulo-pagina {
-    font-size: 36px;
-    font-weight: 300;
-    color: #444;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.descripcion-pagina {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-}
-
-/* CONTENEDOR DIVIDIDO (Mapa + Tarjeta) */
-.contenedor-locales-split {
-    display: flex;
-    gap: 30px; /* Espacio entre mapa y tarjeta */
-    height: 600px; /* Altura fija para que se vea imponente */
-    margin-bottom: 40px;
-    text-align: left; /* Alineamos el texto de la tarjeta a la izquierda */
-}
-
-/* El Mapa ocupa el espacio restante (aprox 70%) */
-.mapa-wrapper {
-    flex: 2; 
-    height: 100%;
-    background-color: #eee;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border: 1px solid #ddd;
-}
-
-/* La Tarjeta de Información (aprox 30%) */
-.tarjeta-info-local {
-    flex: 1;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave */
-    border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
-}
-
-.tarjeta-info-local h3 {
-    margin-top: 0;
-    font-size: 24px;
-    color: #111;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #E84C50; /* Línea roja decorativa */
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 25px;
-    font-size: 15px;
-    color: #555;
-}
-
-.info-item i {
-    color: #E84C50; /* Iconos rojos */
-    font-size: 20px;
-    margin-right: 15px;
-    margin-top: 3px;
-    width: 25px; /* Ancho fijo para alinear */
-    text-align: center;
-}
-
-.info-item strong {
-    display: block;
-    color: #333;
-    margin-bottom: 4px;
-    font-weight: 600;
-}
-
-.info-item a {
-    color: #555;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.info-item a:hover {
-    color: #E84C50;
-    text-decoration: underline;
-}
-
-/* RESPONSIVE: En celulares se pone uno debajo del otro */
-@media (max-width: 900px) {
-    .contenedor-locales-split {
-        flex-direction: column;
-        height: auto; /* Altura automática */
-    }
-
-    .mapa-wrapper {
-        height: 400px; /* Altura fija para el mapa en celular */
-        width: 100%;
-    }
-
-    .tarjeta-info-local {
-        width: 100%;
-        box-sizing: border-box; /* Para que el padding no rompa el ancho */
-    }
-}
-
-footer {
-    padding: 20px;
-    font-size: 14px;
-    color: #666;
-    background-color: #fff;
-    border-top: 1px solid #eee;
-    margin-top: auto;
-}
-.contenedor-principal {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.titulo-pagina {
-    font-size: 36px;
-    font-weight: 300;
-    color: #444;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.descripcion-pagina {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-}
-
-/* CONTENEDOR DIVIDIDO */
+/* --- CONTENEDOR DIVIDIDO (MAPA + TARJETA) --- */
 .contenedor-locales-split {
     display: flex;
     gap: 30px;
-    min-height: 600px; /* Usamos min-height para que crezca si el contenido es largo */
+    min-height: 600px; /* Altura mínima para verse bien */
     margin-bottom: 40px;
     text-align: left;
 }
 
-/* Mapa */
+/* 1. El Mapa (Izquierda/Grande) */
 .mapa-wrapper {
-    flex: 2; 
-    height: auto; /* Se adapta a la altura del contenedor */
+    flex: 2; /* Ocupa el doble de espacio que la tarjeta */
+    height: auto;
     min-height: 500px;
     background-color: #eee;
     border-radius: 12px;
@@ -466,17 +298,17 @@ footer {
     border: 1px solid #ddd;
 }
 
-/* Tarjeta */
+/* 2. La Tarjeta de Información (Derecha/Lateral) */
 .tarjeta-info-local {
-    flex: 1;
+    flex: 1; /* Ocupa 1 parte del espacio */
     background-color: #fff;
-    padding: 30px; /* Un poco menos de padding para que quepa todo */
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border: 1px solid #eee;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Centra el contenido verticalmente */
 }
 
 .tarjeta-info-local h3 {
@@ -524,31 +356,27 @@ footer {
     text-decoration: underline;
 }
 
-/* --- BOTONES GPS (NUEVO) --- */
+/* --- BOTÓN GPS (Google Maps) --- */
 .botones-gps {
     margin-top: 10px;
     padding-top: 20px;
     border-top: 1px solid #eee;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .btn-gps {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    padding: 14px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-gps:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 15px;
+    transition: all 0.2s ease;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box;
 }
 
 .btn-gps i {
@@ -556,30 +384,26 @@ footer {
     font-size: 18px;
 }
 
-/* Estilo WAZE */
-.btn-gps.waze {
-    background-color: #33ccff; 
-    color: white;
-    border: 1px solid #2db6e6;
-}
-.btn-gps.waze:hover {
-    background-color: #2db6e6;
-}
-
-/* Estilo GOOGLE MAPS */
+/* Estilo Google Maps */
 .btn-gps.gmaps {
-    background-color: #f1f1f1;
+    background-color: #f8f8f8;
     color: #333;
     border: 1px solid #ddd;
-}
-.btn-gps.gmaps:hover {
-    background-color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* RESPONSIVE */
+.btn-gps.gmaps:hover {
+    background-color: #E84C50; /* Rojo al pasar el mouse */
+    color: white;
+    border-color: #E84C50;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(232, 76, 80, 0.3);
+}
+
+/* --- RESPONSIVE (CELULARES) --- */
 @media (max-width: 900px) {
     .contenedor-locales-split {
-        flex-direction: column;
+        flex-direction: column; /* Pone uno debajo del otro */
     }
     .mapa-wrapper {
         height: 400px;
@@ -592,6 +416,7 @@ footer {
     }
 }
 
+/* --- FOOTER --- */
 footer {
     padding: 20px;
     font-size: 14px;
