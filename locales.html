@@ -18,9 +18,7 @@
         </div> 
         <nav>
             <a href="index.html#proyectos">Inspiración</a>
-            
             <a href="locales.html" class="link-activo">Local</a>
-            
             <div class="dropdown">
                 <button class="nav-btn" onclick="toggleDropdown()">
                     Contacto <i class="fa-solid fa-chevron-down"></i>
@@ -44,19 +42,54 @@
             Visítanos en nuestra sede central en Puente Piedra. Coordinamos proyectos de ingeniería y desarrollo para todo el país.
         </p>
 
-        <div class="contenedor-mapa-centrado">
-            <iframe 
-                width="100%" 
-                height="650" 
-                frameborder="0" 
-                scrolling="no" 
-                marginheight="0" 
-                marginwidth="0" 
-                src="https://maps.google.com/maps?q=-11.885896,-77.067611&hl=es&z=19&output=embed"
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+        <div class="contenedor-locales-split">
+            
+            <div class="mapa-wrapper">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    /* Usando un enlace genérico de embed para las coordenadas exactas -11.885896, -77.067611 */
+                    src="https://maps.google.com/maps?q=-11.885896,-77.067611&hl=es&z=18&output=embed"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="tarjeta-info-local">
+                <h3>Sede Central</h3>
+                
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Dirección:</strong><br>
+                        Calle los Cedros del Nte.<br>
+                        Puente Piedra 15121, Perú
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <strong>Horario de Atención:</strong><br>
+                        Lunes a Viernes<br>
+                        9:00 AM - 6:00 PM
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <strong>Contacto:</strong><br>
+                        <a href="https://wa.me/51981416933" target="_blank">+51 981 416 933</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -66,4 +99,3 @@
 
     <script src="script.js"></script>
 </body>
-</html>
