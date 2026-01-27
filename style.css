@@ -33,6 +33,9 @@ body {
     margin-left: 20px;
     font-size: 14px;
     transition: color 0.3s;
+    /* Permite alinear el icono y el texto verticalmente */
+    display: inline-flex;
+    align-items: center;
 }
 
 .navbar nav a:hover, .navbar nav a.link-activo {
@@ -91,6 +94,7 @@ body {
     margin-left: 0 !important;
     text-align: left;
     transition: background-color 0.2s;
+    display: block; /* Restaurado a block para el dropdown */
 }
 
 .dropdown-content a:hover {
@@ -245,7 +249,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- ESTILOS DE LA PÁGINA "LOCALES" (Modificado para mapa grande) --- */
+/* --- ESTILOS DE LA PÁGINA "LOCALES" --- */
 .contenedor-principal {
     max-width: 1200px;
     margin: 60px auto;
@@ -269,51 +273,7 @@ body {
     margin: 0 auto 50px auto;
 }
 
-/* El mapa grande y centrado */
-.contenedor-mapa-centrado {
-    width: 100%;
-    height: 650px; /* AUMENTADO: Antes era automático o pequeño, ahora es gigante */
-    min-height: 650px; /* Fuerza que no se encoja */
-    background-color: #eee;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Sombra un poco más marcada */
-    border: 1px solid #ddd;
-    margin-bottom: 40px; /* Espacio antes del footer */
-}
-
-footer {
-    padding: 20px;
-    font-size: 14px;
-    color: #666;
-    background-color: #fff;
-    border-top: 1px solid #eee;
-    margin-top: auto;
-}
-.contenedor-principal {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.titulo-pagina {
-    font-size: 36px;
-    font-weight: 300;
-    color: #444;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.descripcion-pagina {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-}
-
-/* El mapa grande, centrado y AHORA EN GRISES */
+/* El mapa grande y centrado (YA SIN FILTRO GRIS) */
 .contenedor-mapa-centrado {
     width: 100%;
     height: 650px;
@@ -326,16 +286,7 @@ footer {
     margin-bottom: 40px;
 }
 
-/* ESTA ES LA MAGIA: Convierte el mapa a escala de grises */
-.contenedor-mapa-centrado iframe {
-    filter: grayscale(100%) invert(5%); /* Grises elegantes */
-    transition: filter 0.3s; /* Efecto suave */
-}
-
-/* Opcional: Si quieres que vuelva a color al pasar el mouse */
-.contenedor-mapa-centrado iframe:hover {
-    filter: grayscale(0%);
-}
+/* SE ELIMINÓ EL BLOQUE QUE DABA EFECTO GRIS AL IFRAME */
 
 footer {
     padding: 20px;
