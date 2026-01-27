@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Locales - Infabinp E.I.R.L.</title>
+    <link rel="icon" href="XDDD.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-interna"> <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: #fff; text-decoration: none;">♥ INFABINP</a>
+        </div> 
+        <nav>
+            <a href="index.html#proyectos">Inspiración</a>
+            <a href="locales.html" class="link-activo">Local</a>
+            
+            <div class="dropdown">
+                <button class="nav-btn" onclick="toggleDropdown()">
+                    Contacto <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://www.facebook.com/infabinp.eirl?locale=es_LA" target="_blank">
+                        <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook
+                    </a>
+                    <a href="https://wa.me/51981416933?text=Hola,%20vi%20tu%20web%20y%20quiero%20más%20información." target="_blank">
+                        <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contenedor-principal">
+        <h1 class="titulo-pagina">NUESTROS LOCALES</h1>
+        
+        <p class="descripcion-pagina">
+            Infabinp E.I.R.L. es líder en soluciones de ingeniería civil y desarrollo de software en la región. 
+            Nuestra sede central coordina proyectos de alto impacto desde Puente Piedra para todo el país.
+        </p>
+
+        <div class="contenedor-locales">
+            <div class="lista-sedes">
+                <div class="item-sede activo">
+                    OFICINA PRINCIPAL <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="item-sede">
+                    ALMACÉN CENTRAL <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="item-sede">
+                    CENTRO DE PROYECTOS <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="item-sede">
+                    LABORATORIO DE SUELOS <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="visor-mapa">
+                <iframe 
+                    src="https://www.google.com/maps/search/?api=1&query=-11.885940%2C-77.067669" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="year"></span> Infabinp Eirl. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
