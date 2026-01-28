@@ -6,7 +6,6 @@ body {
     background-color: #ffffff;
     color: #333333;
     text-align: center;
-    /* Asegura que el footer se quede abajo incluso con poco contenido */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -256,11 +255,14 @@ body {
    ESTILOS DE LA PÁGINA "LOCALES"
    ========================================= */
 
+/* --- CAMBIO 1: Aumentamos el ancho máximo a 1600px para que el mapa se expanda --- */
 .contenedor-principal {
-    max-width: 1200px;
+    max-width: 1600px; /* Antes era 1200px. Ahora es más ancho */
+    width: 95%; /* Ocupa casi toda la pantalla en monitores grandes */
     margin: 60px auto;
     padding: 0 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .titulo-pagina {
@@ -271,49 +273,46 @@ body {
     text-transform: uppercase;
 }
 
-/* --- MEJORA 2: Texto superior más legible --- */
 .descripcion-pagina {
-    color: #333; /* Antes era #666, ahora es más oscuro */
-    font-size: 18px; /* Un poco más grande para leer mejor */
+    color: #333;
+    font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 50px auto;
 }
 
-/* --- MEJORA 3: Alineación de Alturas (Simetría) --- */
+/* --- Contenedor Dividido --- */
 .contenedor-locales-split {
     display: flex;
     gap: 30px;
-    margin-bottom: 60px; /* Más espacio abajo antes del footer */
+    margin-bottom: 60px;
     text-align: left;
-    align-items: stretch; /* ESTO ES CLAVE: Estira ambos hijos a la misma altura */
+    align-items: stretch;
 }
 
-/* El Mapa */
+/* --- CAMBIO 2: El mapa ahora ocupa 3 partes (75% del ancho) --- */
 .mapa-wrapper {
-    flex: 2;
-    /* Quitamos el height auto/fijo, dejamos que flex lo controle o usamos min-height */
-    min-height: 550px; /* Altura base para que se vean bien ambos */
+    flex: 3; /* Antes era flex: 2. Ahora es más dominante */
+    min-height: 550px;
     background-color: #eee;
-    border-radius: 20px; /* Bordes redondeados del marco */
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15); /* Sombra flotante */
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
     overflow: hidden;
     border: none;
 }
 
-/* La Tarjeta */
+/* --- La Tarjeta (ocupa 1 parte, 25% del ancho) --- */
 .tarjeta-info-local {
     flex: 1;
+    min-width: 300px; /* Asegura que la tarjeta no se aplaste demasiado */
     background-color: #fff;
-    padding: 40px; /* Un poco más de aire interno */
+    padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border: 1px solid #eee;
-    
-    /* Para centrar el contenido si la tarjeta es muy alta */
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .tarjeta-info-local h3 {
@@ -331,7 +330,7 @@ body {
     align-items: flex-start;
     margin-bottom: 25px;
     font-size: 15px;
-    color: #444; /* Texto un poco más oscuro también aquí */
+    color: #444;
 }
 
 .info-item i {
@@ -361,9 +360,9 @@ body {
     text-decoration: underline;
 }
 
-/* --- MEJORA 1: Botón GPS Negro "Pro" --- */
+/* --- Botón GPS (Negro) --- */
 .botones-gps {
-    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+    margin-top: auto;
     padding-top: 30px;
     border-top: 1px solid #eee;
     display: flex;
@@ -374,7 +373,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px; /* Botón un poco más robusto */
+    padding: 16px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -389,19 +388,19 @@ body {
     font-size: 18px;
 }
 
-/* Estilo NEGRO INTENSO */
+/* Estilo NEGRO */
 .btn-gps.gmaps {
-    background-color: #000; /* Negro puro */
-    color: #fff; /* Texto blanco */
+    background-color: #000;
+    color: #fff;
     border: 1px solid #000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra elegante */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .btn-gps.gmaps:hover {
-    background-color: #E84C50; /* Rojo marca al pasar mouse */
+    background-color: #E84C50;
     border-color: #E84C50;
     color: white;
-    transform: translateY(-3px); /* Se levanta un poco más */
+    transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(232, 76, 80, 0.4);
 }
 
@@ -411,7 +410,7 @@ body {
         flex-direction: column;
     }
     .mapa-wrapper {
-        min-height: 400px; /* En celular el mapa es más bajito */
+        min-height: 400px;
         height: 400px;
         width: 100%;
     }
@@ -421,19 +420,19 @@ body {
     }
 }
 
-/* --- MEJORA 4: Footer Oscuro Separado --- */
+/* --- FOOTER --- */
 footer {
-    background-color: #111; /* Fondo Negro */
-    color: #999; /* Texto gris suave */
-    padding: 40px 20px; /* Más espacioso */
+    background-color: #111;
+    color: #999;
+    padding: 40px 20px;
     font-size: 14px;
     border-top: 1px solid #222;
-    margin-top: auto; /* Se empuja al final */
+    margin-top: auto;
     width: 100%;
     box-sizing: border-box;
 }
 
 footer span#year {
-    color: #fff; /* El año en blanco brillante */
+    color: #fff;
     font-weight: 600;
 }
